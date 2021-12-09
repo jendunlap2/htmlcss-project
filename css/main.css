@@ -1,0 +1,89 @@
+body{
+    background-color: darkgray;
+    margin:0;
+    font-family: Tahoma, sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: auto;
+    gap: 0em 0em;
+    grid-auto-flow: 1fr;
+    grid-template-areas:
+      "nav-bar page-contents .";
+  }
+/* --- Nav Bar Section --- */
+.nav-bar { 
+    grid-area: nav-bar; 
+    background-color:black;
+    font-family: Tahoma, sans-serif;
+    font-size: .75em;
+
+    }
+.nav-bar a {
+    color:darkgrey;
+    text-decoration: none;
+}
+.nav-bar a:hover{
+    color:white;
+}
+.nav-bar ul, .about-me ul{
+    list-style-type: none;
+    padding: 1em;
+
+}
+.nav-bar li{
+    padding:.5em;
+}
+/*--- Page Contents Section ---*/
+  .page-contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "about-me about-me contact"
+      ". . .";
+    grid-area: page-contents;
+}
+  
+.header { 
+    grid-area: header;
+    padding: 0;
+    }
+
+.header img{
+    max-height: 10em;
+    width:100vw;
+}    
+.header h2{
+    padding: 1em;
+}
+.about-me { 
+    grid-area: about-me; 
+    padding: 1em;
+    padding-right: 2em;
+    }
+.about-me a{
+    text-decoration: none;
+    color:midnightblue
+}
+.about-me a:hover{
+    color:white;
+}
+.about-me img{
+    width:8em;
+}
+.contact { 
+    grid-area: contact; 
+    padding:2em;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: lightgray;
+    }
+
+input[type=text], textarea {
+    width:100%;
+    }
